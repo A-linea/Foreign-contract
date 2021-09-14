@@ -3,13 +3,17 @@
 namespace App\Http\Controllers\Contracts\PDF;
 
 use App\Http\Controllers\Contracts\Factories\PDFContractFactory;
-use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Http\Response;
 
 class PDFForeignContract implements PDFContractFactory
 {
-    public function createContractPDF($data) :void
+    public function createContractPDF($data): Response
     {
-        $pdf = PDF::loadView('contracts.PDF.foreign_contract')->stream('contract.pdf');
+        $pdf = PDF::loadView('contracts.PDF.foreign_contract',  $data)->stream();
+        return $pdf;
     }
+
+
 
 }

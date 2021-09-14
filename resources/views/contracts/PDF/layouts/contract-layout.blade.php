@@ -9,15 +9,15 @@
             font-family: "DejaVu Sans";
             font-style: normal;
             font-weight: 400;
-            src: url({{asset("/fonts/DejaVuSans.ttf")}}),
-                /* IE9 Compat Modes */ url({{asset("/fonts/DejaVuSans.ttf")}}); format("truetype");
+            {{--src: url({{asset("/fonts/DejaVuSans.ttf")}}),--}}
+            {{--    /* IE9 Compat Modes */ url({{asset("/fonts/DejaVuSans.ttf")}}); format("truetype");--}}
         }
         @font-face {
             font-family: "DejaVu Sans";
             font-style: normal;
             font-weight: 900;
-            src: url({{asset("/fonts/DejaVuSans-Bold.ttf")}}),
-                /* IE9 Compat Modes */ url({{asset("/fonts/DejaVuSans-Bold.ttf")}}); format("truetype");
+            {{--src: url({{asset("/fonts/DejaVuSans-Bold.ttf")}}),--}}
+            {{--    /* IE9 Compat Modes */ url({{asset("/fonts/DejaVuSans-Bold.ttf")}}); format("truetype");--}}
         }
         html, body {
             margin: 0;

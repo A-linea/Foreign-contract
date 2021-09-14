@@ -20,8 +20,30 @@ class PDFController extends Controller
     public function showPdf()
     {
         $factory = $this->getPDFFactory('foreign');
-        $data = 'PDF data';
-        $factory->createContractPDF($data);
+        $data =  [
+            'name'=> 'Eugene',
+            'last_name' => 'Dmitrievskiy'
+        ];
+        try {
+           return $factory->showContractPDF($data);
+
+        } catch (\Exception $exception) {
+            dd($exception);
+        }
+    }
+
+    public function downLoadContractPDF() {
+        $factory = $this->getPDFFactory('foreign');
+        $data =  [
+            'name'=> 'Eugene',
+            'last_name' => 'Dmitrievskiy'
+        ];
+        try {
+            return $factory->createContractPDF($data);
+
+        } catch (\Exception $exception) {
+            dd($exception);
+        }
     }
 
     private function getPDFFactory($contract_type): PDFContractFactory
