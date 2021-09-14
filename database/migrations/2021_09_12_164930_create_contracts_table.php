@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateForeignContractsTable extends Migration
+class CreateContractsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateForeignContractsTable extends Migration
      */
     public function up()
     {
-        Schema::create('foreign_contracts', function (Blueprint $table) {
+        Schema::create('contracts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('type')->default('foreign');
             $table->string('territory_covered')->nullable();
             $table->dateTime('valid_from')->nullable();
             $table->dateTime('valid_till')->nullable();
@@ -37,6 +38,6 @@ class CreateForeignContractsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('foreign_contracts');
+        Schema::dropIfExists('contracts');
     }
 }

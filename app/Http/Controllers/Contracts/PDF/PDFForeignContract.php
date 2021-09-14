@@ -10,10 +10,13 @@ class PDFForeignContract implements PDFContractFactory
 {
     public function createContractPDF($data): Response
     {
-        $pdf = PDF::loadView('contracts.PDF.foreign_contract',  $data)->stream();
-        return $pdf;
+
+        return PDF::loadView('contracts.PDF.foreign_contract',  $data)->download('contract.pdf');
     }
 
 
-
+    public function showContractPDF(array $data)
+    {
+       return   PDF::loadView('contracts.PDF.foreign_contract', $data)->stream();
+    }
 }

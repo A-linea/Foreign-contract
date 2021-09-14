@@ -21,8 +21,8 @@ class PDFController extends Controller
     {
         $factory = $this->getPDFFactory('foreign');
         $data =  [
-            'name'=> 'Eugene',
-            'last_name' => 'Dmitrievskiy'
+            'name'=> 'Евгений',
+            'last_name' => 'Дмитриевский'
         ];
         try {
            return $factory->showContractPDF($data);
