@@ -46,6 +46,21 @@ class PDFController extends Controller
         }
     }
 
+    public function previewContractPDF() {
+
+        $factory = $this->getPDFFactory('foreign');
+        $data =  [
+            'name'=> 'Eugene',
+            'last_name' => 'Dmitrievskiy'
+        ];
+        try {
+            return $factory->previewContractPDF($data);
+
+        } catch (\Exception $exception) {
+            dd($exception);
+        }
+    }
+
     private function getPDFFactory($contract_type): PDFContractFactory
     {
         switch ($contract_type) {

@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/download-pdf-contract', [PDFController::class, 'downLoadContractPDF'])->name('downloadContract');
 Route::get('/show-pdf-contract', [PDFController::class, 'showPdf'])->name('showContract');
+Route::get('/preview-pdf-contract', [PDFController::class, 'previewContractPDF'])->name('previewContract');
 Route::get('/', [HomeController::class, '__invoke'])->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';

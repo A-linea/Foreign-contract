@@ -30,7 +30,7 @@
             padding: 0;
         }
         body {
-            font-family: "DejaVu Sans";
+            font-family: "DejaVu Sans", "DejaVu Serif", sans-serif;
             font-size: 10px;
         }
         ul {
@@ -68,7 +68,7 @@
         }
         .header__text {
             text-align: center;
-            font-size: 13px;
+            font-size: 12px;
             margin-bottom: 3px;
         }
         .header__text--number {
@@ -80,6 +80,7 @@
         }
         .header__title-container {
             padding-left: 30px;
+            width: 100%;
         }
         .header__logo-container img {
             vertical-align: top;

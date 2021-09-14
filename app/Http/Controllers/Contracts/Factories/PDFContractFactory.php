@@ -6,4 +6,5 @@ interface PDFContractFactory
 {
     public function createContractPDF(array $data);
     public function showContractPDF(array $data);
+    public function previewContractPDF(array $data);
 }
