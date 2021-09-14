@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-//Auth::routes();
+Route::get('/generateContract', [\App\Http\Controllers\Contracts\PDF\PDFController::class, 'showPdf'])->name('showContract');
 Route::get('/', [HomeController::class, '__invoke'])->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
