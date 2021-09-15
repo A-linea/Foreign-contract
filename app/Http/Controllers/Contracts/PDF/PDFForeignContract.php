@@ -25,7 +25,8 @@ class PDFForeignContract implements PDFContractFactory
 
     public function showContractPDF(array $data)
     {
-       return   PDF::loadView('contracts.PDF.foreign_contract', $data)->stream();
+       return   PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])
+        ->loadView('contracts.PDF.foreign_contract', $data)->stream();
     }
 
     public function previewContractPDF(array $data) {
