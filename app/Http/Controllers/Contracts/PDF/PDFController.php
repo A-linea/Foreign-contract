@@ -46,8 +46,9 @@ class PDFController extends Controller
         }
     }
 
-    public function previewContractPDF() {
+    public function previewContractPDF(Request $request) {
 
+        dd($request);
         $factory = $this->getPDFFactory('foreign');
         $data =  [
             'name'=> 'Eugene',

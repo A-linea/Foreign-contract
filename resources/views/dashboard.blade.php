@@ -14,7 +14,7 @@
                     </p>
                 </div>
 
-                <form class="p-6 space-y-6" method="post">
+                <form class="p-6 space-y-6" method="get" action="{{route('previewContract')}}">
 
                     <div class="mt-1 flex flex-row flex-wrap">
                         <div class="mt-4 w-3/12">
